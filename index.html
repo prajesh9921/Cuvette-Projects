@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Mini Project - 1</title>
+    <meta name="Mini Project" content="Mini Project" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="info">
+        <p style="margin: 0; font-size: 39px; font-weight: 700">
+          An inspiring design delivered to your inbox every morning
+        </p>
+        <p style="margin: 20px 0 0; font-size: 21px; font-weight: 400">
+          Our team scouts the internet for the best designs, illustrations and
+          art and delivers a truly inspiring one every day to your inbox
+        </p>
+        <p style="font-size: 21px; font-weight: 700; margin: 6% 0">
+          Show me how it looks
+        </p>
+
+        <div>
+          <!-- Form -->
+          <div id="registrationForm">
+            <div
+              style="
+                margin-right: 5px;
+                display: inline-flex;
+                flex-direction: column;
+                text-align: center;
+              "
+            >
+              <input
+                type="text"
+                id="email"
+                name="Email"
+                value="Your e-mail address"
+              />
+              <p
+                style="
+                  display: inline-block;
+                  color: #fff;
+                  font-size: 16px;
+                  font-style: normal;
+                  margin-top: 10px;
+                "
+              >
+                Free - No Spam - No Data Sharing
+              </p>
+            </div>
+            <input
+              type="submit"
+              id="register"
+              name="RegisterNow"
+              value="Register Now"
+            />
+          </div>
+
+          <!-- Thank You -->
+          <div id="thankYouMessage" style="display: none;">
+            <p style="font-size: 40px; font-weight: bold">Thank You!</p>
+            <p
+              style="
+                display: inline-block;
+                color: #fff;
+                font-size: 16px;
+                font-style: normal;
+                margin-top: 10px;
+              "
+            >
+              Free - No Spam - No Data Sharing
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="image">
+        <img
+          src="./assets/img.png"
+          alt="Person Icon Image"
+          class="person-image"
+        />
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="left-list">
+        <p>Prompt Generator</p>
+        <p>Dweep Daily</p>
+        <p>All Contributors</p>
+        <p>Your data on Dweep.io</p>
+        <p>Contribute to Dweep</p>
+      </div>
+
+      <div class="right-list">
+        <div style="display: flex; flex-direction: column; row-gap: 10px">
+          <p>Dweep.io</p>
+          <p>Made with love in India</p>
+          <p>
+            <img src="./assets/Linkedin.png" class="logo" alt="Linkedin logo" />
+            <img src="./assets/Insta.png" class="logo" alt="Instagram logo" />
+          </p>
+        </div>
+
+        <p>hello@dweep.io</p>
+      </div>
+    </div>
+    <script src="./logic.js"></script>
+  </body>
+</html>
