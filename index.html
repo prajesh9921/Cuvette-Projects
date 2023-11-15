@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Calculator</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="main-div">
+      <p style="color: white; font-weight: 800">calc</p>
+
+      <input class="display" type="text" placeholder="0" />
+
+      <div class="keypadmain">
+        <div class="keypad">
+          <input
+            type="button"
+            class="btn-styl-1"
+            id="seven"
+            value="7"
+            onclick="append('7')"
+          />
+          <input
+            type="button"
+            class="btn-styl-1"
+            id="eight"
+            value="8"
+            onclick="append('8')"
+          />
+          <input
+            type="button"
+            class="btn-styl-1"
+            id="nine"
+            value="9"
+            onclick="append('9')"
+          />
+          <input
+            type="button"
+            class="btn-styl-2"
+            id="del"
+            value="DEL"
+            onclick="Del()"
+          />
+          <input
+            type="button"
+            class="btn-styl-1"
+            id="four"
+            value="4"
+            onclick="append('4')"
+          />
+          <input
+            type="button"
+            class="btn-styl-1"
+            id="five"
+            value="5"
+            onclick="append('5')"
+          />
+          <input
+            type="button"
+            class="btn-styl-1"
+            id="six"
+            value="6"
+            onclick="append('6')"
+          />
+          <input
+            type="button"
+            class="btn-styl-1"
+            id="plus"
+            value="+"
+            onclick="append('+')"
+          />
+          <input
+            type="button"
+            class="btn-styl-1"
+            id="one"
+            value="1"
+            onclick="append('1')"
+          />
+          <input
+            type="button"
+            class="btn-styl-1"
+            id="two"
+            value="2"
+            onclick="append('2')"
+          />
+          <input
+            type="button"
+            class="btn-styl-1"
+            id="three"
+            value="3"
+            onclick="append('3')"
+          />
+          <input
+            type="button"
+            class="btn-styl-1"
+            id="minus"
+            value="-"
+            onclick="append('-')"
+          />
+          <input
+            type="button"
+            class="btn-styl-1"
+            id="dot"
+            value="."
+            onclick="append('.')"
+          />
+          <input
+            type="button"
+            class="btn-styl-1"
+            id="zero"
+            value="0"
+            onclick="append('0')"
+          />
+          <input
+            type="button"
+            class="btn-styl-1"
+            id="divide"
+            value="/"
+            onclick="append('/')"
+          />
+          <input
+            type="button"
+            class="btn-styl-1"
+            id="multiplication"
+            value="x"
+            onclick="append('x')"
+          />
+        </div>
+
+        <div class="last-btn">
+          <input
+            type="button"
+            class="btn-styl-2 last-btn-style"
+            id="reset"
+            value="RESET"
+            onclick="Reset()"
+          />
+          <input
+            type="button"
+            class="btn-styl-3 last-btn-style"
+            id="equal"
+            value="="
+            onclick="EqualTo()"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
