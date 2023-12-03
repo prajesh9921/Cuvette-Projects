@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Thank You</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./thankYou.css" />
+  </head>
+  <body>
+    <div class="main">
+      <img
+        src="../../assets/images/trophy.png"
+        alt="Trophy"
+        class="trophy-img"
+      />
+      <p class="hurray-text">HURRAY!!</p>
+      <p class="sub-text">YOU WON THE GAME</p>
+      <a href="../../index.html">
+        <button class="playagain-btn">PLAY AGAIN</button>
+      </a>
+    </div>
+
+    <div class="rules">
+      <div class="rules-main-box">
+        <div class="rules-box">
+          <h1 class="rules-title">Game Rules</h1>
+          <div class="rule-card">
+            <!-- Dot -->
+            <div class="dot"></div>
+            <p>
+              Rock beats scissors, scissors beat paper, and paper beats rock.
+            </p>
+          </div>
+
+          <div class="rule-card">
+            <!-- Dot -->
+            <div class="dot"></div>
+            <p>
+              Agree ahead of time whether you’ll count off “rock, paper,
+              scissors, shoot” or just “rock, paper, scissors.”
+            </p>
+          </div>
+
+          <div class="rule-card">
+            <!-- Dot -->
+            <div class="dot"></div>
+            <p>
+              Use rock, paper, scissors to settle minor decisions or simply play
+              to pass the time
+            </p>
+          </div>
+
+          <div class="rule-card">
+            <!-- Dot -->
+            <div class="dot"></div>
+            <p>
+              If both players lay down the same hand, each player lays down
+              another hand
+            </p>
+          </div>
+        </div>
+
+        <!-- Close Button -->
+        <div class="close" id="close-rules">
+          <img src="../../assets/images/cross.png" alt="close" />
+        </div>
+      </div>
+
+      <button onclick="openRules()" id="view-rules" class="rule-btn">
+        RULES
+      </button>
+    </div>
+
+    <script src="../ResultPage/resultIndex.js"></script>
+  </body>
+</html>

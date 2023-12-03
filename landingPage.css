@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+:root {
+  --roboto: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #8cc461;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  font-family: var(--roboto);
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* Game ScoreCard */
+.game-scorecard {
+  display: flex;
+  width: 50vw;
+  height: 150px;
+  border-radius: 15px;
+  border: 2px solid #fff;
+  /* align-items: center; */
+  padding: 15px;
+}
+
+.game-title {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  margin: 0;
+  padding: 0;
+}
+
+.computerscore-card,
+.yourscore-card {
+  border-radius: 10px;
+  background: #fff;
+  width: 150px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.computerscore-text,
+.yourscore-text {
+  color: #656565;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1.7px;
+  margin: 0;
+}
+
+.computers-score,
+.yours-score {
+  color: #252525;
+  text-align: center;
+  font-size: 60px;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Game Buttons */
+.buttons {
+  width: 25%;
+  position: relative;
+  margin: 10% auto;
+}
+
+.rockandscissor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rock-outershell,
+.scissor-outershell {
+  background-color: #0074b6;
+  height: 120px;
+  width: 120px;
+  border-radius: 60px;
+  -moz-box-shadow: 0 0 3px #000;
+  -webkit-box-shadow: 0 0 3px #000;
+  box-shadow: 0 0 10px #000;
+  z-index: 2;
+}
+
+.rock-outershell:hover,
+.scissor-outershell:hover {
+  height: 130px;
+  width: 130px;
+  border-radius: 65px;
+  cursor: pointer;
+}
+
+.rock-innershell,
+.scissor-innershell {
+  background-color: #fff;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rock-outershell:hover .rock-innershell,
+.scissor-outershell:hover .scissor-innershell {
+  height: 110px;
+  width: 110px;
+  border-radius: 55px;
+}
+
+.btn-connector {
+  height: 20px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.64);
+}
+
+.middle-btn-connector {
+  display: flex;
+  justify-content: space-evenly;
+  height: 120px;
+}
+
+.middleConnector-1 {
+  height: 180px;
+  left: 25%;
+  top: 100px;
+  z-index: 1;
+  width: 20px;
+  background: rgba(0, 0, 0, 0.64);
+  transform: rotate(-25deg);
+  position: absolute;
+}
+
+.middleConnector-2 {
+  height: 180px;
+  right: 25%;
+  top: 100px;
+  z-index: 1;
+  width: 20px;
+  background: rgba(0, 0, 0, 0.64);
+  transform: rotate(25deg);
+  position: absolute;
+}
+
+.paper-outershell {
+  background-color: #0074b6;
+  height: 120px;
+  width: 120px;
+  border-radius: 60px;
+  -moz-box-shadow: 0 0 3px #000;
+  -webkit-box-shadow: 0 0 3px #000;
+  box-shadow: 0 0 10px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+.paper-innershell {
+  background-color: #fff;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paper-outershell:hover {
+  height: 130px;
+  width: 130px;
+  border-radius: 65px;
+  cursor: pointer;
+}
+
+.paper-outershell:hover .paper-innershell {
+  height: 110px;
+  width: 110px;
+  border-radius: 55px;
+}
+
+.rules {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.rule-btn {
+  font-family: var(--roboto);
+  color: #fff;
+  background-color: #8cc461;
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: 2.1px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.rule-btn:hover {
+  background-color: #fff;
+  border: 2px solid #8cc461;
+  color: #8cc461;
+}
+
+.rules-main-box {
+  position: relative;
+  margin-right: 25px;
+}
+
+.dot {
+  min-height: 10px;
+  min-width: 10px;
+  background-color: #ffd600;
+}
+
+.rules-box {
+  background-color: #004429;
+  border: 8px solid #fff;
+  border-radius: 15px;
+  padding: 15px;
+  width: 280px;
+  display: none;
+  flex-direction: column;
+}
+
+.rule-card {
+  display: flex;
+  align-items: center;
+}
+
+.rule-card p {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+  margin: 10px 0 10px 10px;
+}
+
+.rules-title {
+  color: #fff;
+  font-family: var(--roboto);
+  margin: 0;
+  text-align: center;
+}
+
+.close {
+  border: 10px solid #fff;
+  background-color: #FF0000;
+  height: 50px;
+  width: 50px;
+  border-radius: 35px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  cursor: pointer;
+}
+.close img {
+  height: 30px;
+  width: 30px;
+}

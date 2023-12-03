@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+:root {
+  --roboto: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #89c15e;
+}
+
+p {
+  font-family: var(--roboto);
+  margin: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    gap: 20px;
+    height: 100lvh;
+} 
+
+.trophy-img {
+  width: 40%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.hurray-text {
+  color: #fff;
+  text-align: center;
+  font-size: 91px;
+  font-weight: 600;
+  letter-spacing: 9.1px;
+}
+
+.sub-text {
+  color: #fff;
+  text-align: center;
+  font-size: 41px;
+  font-weight: 600;
+  letter-spacing: 4.1px;
+}
+
+.playagain-btn {
+    padding: 15px 25px;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+.rules {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+  
+  .rule-btn {
+    font-family: var(--roboto);
+    color: #fff;
+    background-color: #8cc461;
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: 2.1px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .rule-btn:hover {
+    background-color: #fff;
+    border: 2px solid #8cc461;
+    color: #8cc461;
+  }
+  
+  .rules-main-box {
+    position: relative;
+    margin-right: 25px;
+  }
+  
+  .dot {
+    min-height: 10px;
+    min-width: 10px;
+    background-color: #ffd600;
+  }
+  
+  .rules-box {
+    background-color: #004429;
+    border: 8px solid #fff;
+    border-radius: 15px;
+    padding: 15px;
+    width: 280px;
+    display: none;
+    flex-direction: column;
+  }
+  
+  .rule-card {
+    display: flex;
+    align-items: center;
+  }
+  
+  .rule-card p {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 10px 0 10px 10px;
+  }
+  
+  .rules-title {
+    color: #fff;
+    font-family: var(--roboto);
+    margin: 0;
+    text-align: center;
+  }
+  
+  .close {
+    border: 10px solid #fff;
+    background-color: #FF0000;
+    height: 50px;
+    width: 50px;
+    border-radius: 35px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    cursor: pointer;
+  }
+  .close img {
+    height: 30px;
+    width: 30px;
+  }

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./resultPage.css">
+    </head>
+    <body>
+        <!-- Score Board -->
+        <div class="game-scorecard">
+            <p class="game-title">ROCK <br> PAPER <br> SCISSORS</p>
+            <div class="spacer"></div>
+                <div class="computerscore-card">
+                    <p class="computerscore-text">COMPUTER <BR>SCORE</BR></p>
+                    <P id="systemScore" class="computers-score">0</P>
+                </div>
+                <div class="yourscore-card">
+                    <p class="yourscore-text">YOUR <BR>SCORE</BR></p>
+                    <P id="myScore" class="yours-score">0</P>
+                </div>
+        </div>
+
+        <!-- Choices -->
+        <div class="choice">
+
+            <!-- User Choice -->
+            <div class="user-choice">
+                <p>YOU PICKED</p>
+                <div id="circle-one" class="user-circle-one">
+                    <div id="circle-two" class="user-circle-two">
+                        <div id="circle-three" class="user-circle-three">
+                            <div class="card-outershell user-card-outershell">
+                                <div class="card-innershell">
+                                    <img id="userImg" src="../../assets/images/rock.png" alt="Rock">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result Display -->
+            <div class="result">
+                <h2 id="result-text">YOU WIN</h2>
+                <p>AGAINST PC</p>
+                <a href="../../index.html">
+                    <button class="playagain-btn">PLAY AGAIN</button>
+                </a>
+            </div>
+
+            <!-- Computer Choice -->
+            <div class="computer-choice">
+                <p>PC PICKED</p>
+                <div id="circle-one" class="pc-circle-one">
+                    <div id="circle-two" class="pc-circle-two">
+                        <div id="circle-three" class="pc-circle-three">
+                            <div class="card-outershell pc-card-outerShell">
+                                <div class="card-innershell">
+                                    <img id="pcImg" src="../../assets/images/rock.png" alt="Rock">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rules and Next btn -->
+        <div class="rules">
+            <div class="rules-main-box">
+                <div class="rules-box">
+                    <h1 class="rules-title">Game Rules</h1>
+                    <div class="rule-card">
+                        <!-- Dot -->
+                        <div class="dot"></div>
+                        <p>Rock beats scissors, scissors beat paper, and paper beats rock.</p>
+                    </div>
+    
+                    <div class="rule-card">
+                        <!-- Dot -->
+                        <div class="dot"></div>
+                        <p>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</p>
+                    </div>
+    
+                    <div class="rule-card">
+                        <!-- Dot -->
+                        <div class="dot"></div>
+                        <p>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</p>
+                    </div>
+    
+                    <div class="rule-card">
+                        <!-- Dot -->
+                        <div class="dot"></div>
+                        <p>If both players lay down the same hand, each player lays down another hand</p>
+                    </div>
+                </div>
+    
+                <!-- Close Button -->
+                <div class="close" id="close-rules">
+                    <img src="../../assets/images/cross.png" alt="close">
+                </div>
+            </div>
+            
+            <div style="display: flex;gap: 10px;">
+                <button onclick="openRules()" class="rule-btn">
+                    RULES
+                </button>
+                <a href="../ThankYou/thankyou.html">
+                    <button id="next-btn" class="nxt-btn">
+                        NEXT
+                    </button>  
+                </a>  
+            </div>
+        </div>
+        <script src="./resultIndex.js" async defer></script>
+    </body>
+</html>
