@@ -1,0 +1,83 @@
+p {
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  display: inline;
+}
+
+.container {
+  display: flex;
+  background-color: black;
+}
+
+.leftContainer {
+  width: 50%;
+}
+
+.leftContainer h1 {
+  color: #fff;
+  font-size: 3rem;
+  position: absolute;
+  bottom: 0;
+  margin: 0 20px 50px 20px;
+}
+
+.rightContainer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.coverImg {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.title {
+  font-family: "Single Day", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #72db73;
+  font-size: 40px;
+  text-align: center;
+}
+
+.input {
+  background-color: #292929;
+  border: none;
+  height: 40px;
+  padding-left: 1rem;
+  color: #fff;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.checkBoxText {
+  color: #7c7c7c;
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.signUpBtn {
+  border-radius: 20px;
+  background: #72db73;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.wrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
