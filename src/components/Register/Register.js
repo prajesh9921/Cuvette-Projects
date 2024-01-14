@@ -1,8 +1,73 @@
-import React from "react";
+import React, { useState } from "react";
 import MusicCover from "../../assets/Images/coverImage.png";
 import styles from "./Register.module.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    username: "",
+    email: "",
+    mobile: "",
+    check: false,
+  });
+  const [error, setError] = useState(false);
+
+  // Function to check is valid email
+  const isEmailValid = (email) => {
+    const emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+    return emailRegex.test(email);
+  };
+
+  // Function to check numeric value
+  const isNonNumeric = (input) => {
+    const nonNumericRegex = /^[^0-9]+$/;
+    return nonNumericRegex.test(input);
+  };
+
+  // Handle change
+  const handleChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+    console.log(formData);
+  };
+
+  // Submit form function
+  const handleSubmit = () => {
+    let isValid = true;
+  
+    if (formData.name.trim().length < 10 || formData.name === "") {
+      setError(true)
+      isValid = false;
+    }
+    if (formData.username.trim().length < 10 || formData.username === "") {
+      setError(true)
+      isValid = false;
+    }
+    if (!isEmailValid(formData.email)) {
+      setError(true)
+      isValid = false;
+    }
+    if (isNonNumeric(formData.mobile) === true || formData.mobile === "") {
+      setError(true)
+      isValid = false;
+    }
+    
+    if (isValid) {
+      console.log("form validation successful");
+      localStorage.setItem("userData", formData);
+      navigate("/genre");
+      setFormData({
+        name: "",
+        username: "",
+        email: "",
+        mobile: "",
+        check: false,
+      });
+    }
+  };
+
   return (
     <div className={styles.container}>
       {/* Left Part */}
@@ -17,21 +82,59 @@ export default function Register() {
       <div className={styles.rightContainer}>
         <div className={styles.wrapper}>
           <h2 className={styles.title}>Super app</h2>
-          <p style={{textAlign: 'center', marginBottom: 50}}>Create your new account</p>
+          <p style={{ textAlign: "center", marginBottom: 50 }}>
+            Create your new account
+          </p>
 
-          <input type="text" className={styles.input} placeholder="Name" />
-          <input type="text" className={styles.input} placeholder="UserName" />
-          <input type="email" className={styles.input} placeholder="Email" />
-          <input type="text" className={styles.input} placeholder="Mobile" />
+          <input
+            type="text"
+            className={styles.input}
+            name="name"
+            placeholder="Name"
+            onChange={(event) => handleChange(event)}
+          />
+          {error ? <p style={{color: 'red', fontSize: 12}}>Please enter valid name.</p> : null}
+          <input
+            type="text"
+            className={styles.input}
+            name="username"
+            placeholder="UserName"
+            onChange={(event) => handleChange(event)}
+          />
+          {error ? <p style={{color: 'red', fontSize: 12}}>Please enter valid UserName.</p> : null}
+          <input
+            type="email"
+            className={styles.input}
+            name="email"
+            placeholder="Email"
+            onChange={(event) => handleChange(event)}
+          />
+          {error ? <p style={{color: 'red', fontSize: 12}}>Please enter valid email.</p> : null}
+          <input
+            type="text"
+            className={styles.input}
+            name="mobile"
+            placeholder="Mobile"
+            onChange={(event) => handleChange(event)}
+          />
+          {error ? <p style={{color: 'red', fontSize: 12}}>Please enter valid phone number.</p> : null}
 
           <label>
-            <input type="checkbox" name="confirmation" />{" "}
+            <input
+              onChange={(e) =>
+                setFormData({ ...formData, [e.target.name]: e.target.checked })
+              }
+              type="checkbox"
+              name="check"
+            />
             <p className={styles.checkBoxText}>
               Share my registration data with Superapp
             </p>
           </label>
 
-          <button className={styles.signUpBtn}>SIGN UP</button>
+          <button className={styles.signUpBtn} onClick={handleSubmit}>
+            SIGN UP
+          </button>
 
           <p className={styles.checkBoxText}>
             {" "}
