@@ -1,0 +1,21 @@
+.container {
+  background-color: #148a08;
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: inline-flex;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  width: 100px;
+  justify-content: space-between          ;
+}
+
+.title {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.cross {
+  color: #085c00;
+  margin-left: 15px;
+  cursor: pointer;
+}
