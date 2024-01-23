@@ -41,7 +41,7 @@ export default function Register() {
       setError(true)
       isValid = false;
     }
-    if (formData.username.trim().length < 10 || formData.username === "") {
+    if (formData.username.trim().length < 5 || formData.username === "") {
       setError(true)
       isValid = false;
     }
@@ -54,9 +54,9 @@ export default function Register() {
       isValid = false;
     }
     
-    if (isValid) {
+    if (isValid && formData.check) {
       console.log("form validation successful");
-      localStorage.setItem("userData", formData);
+      localStorage.setItem("userData", JSON.stringify(formData));
       navigate("/genre");
       setFormData({
         name: "",
@@ -93,7 +93,7 @@ export default function Register() {
             placeholder="Name"
             onChange={(event) => handleChange(event)}
           />
-          {error ? <p style={{color: 'red', fontSize: 12}}>Please enter valid name.</p> : null}
+          {error ? <p style={{color: 'red', fontSize: 12}}>Name should be of greater than 10 letters</p> : null}
           <input
             type="text"
             className={styles.input}
@@ -101,7 +101,7 @@ export default function Register() {
             placeholder="UserName"
             onChange={(event) => handleChange(event)}
           />
-          {error ? <p style={{color: 'red', fontSize: 12}}>Please enter valid UserName.</p> : null}
+          {error ? <p style={{color: 'red', fontSize: 12}}>Name should be of greater than 5 letters.</p> : null}
           <input
             type="email"
             className={styles.input}
@@ -131,6 +131,7 @@ export default function Register() {
               Share my registration data with Superapp
             </p>
           </label>
+          {error ? <p style={{color: 'red', fontSize: 12, marginBottom: 20}}>Please click the checkbox.</p> : null}
 
           <button className={styles.signUpBtn} onClick={handleSubmit}>
             SIGN UP

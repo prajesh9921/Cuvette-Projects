@@ -1,0 +1,49 @@
+.container {
+  background-color: #5746ea;
+  padding: 10px;
+  display: flex;
+  flex: 2;
+  gap: 20px;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.userData {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.subText {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.headText {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.selector {
+  box-sizing: border-box;
+  width: 120px;
+  background-color: #9f94ff;
+  text-align:start;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 20px;
+  margin-right: 10px;
+  display: inline-flex;
+  margin-bottom: 10px;
+}
+
+.genreContainer {
+    display: inline-block;  
+    gap: 10px; 
+    margin-top: 20px;
+}

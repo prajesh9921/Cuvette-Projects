@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./GenrePage.module.css";
 import GenreSelector from "../../components/Genre/GenreSelector/genreSelector";
-import WarningIcon from "../../assets/Svg's/warning";
+import WarningIcon from "../../assets/Svg/warning";
 import GenreCard from "../../components/Genre/GenreCard/genreCard";
 import CV1 from "../../assets/Images/ci1.png";
 import CV2 from "../../assets/Images/ci2.png";
@@ -22,6 +22,7 @@ export default function GenrePage() {
 
   const handelNext = () => {
     if (genreList.length >= 3) {
+      localStorage.setItem('genres', JSON.stringify(genreList));
       navigate("/home");
     }
   };
