@@ -133,7 +133,7 @@ export default function TimerCard() {
         </div>
 
         <div
-          className={isTimerStart ? styles.stopBtn : styles.startBtn}
+          className={isTimerStart ? styles.startBtn : styles.stopBtn}
           onClick={isTimerStart ? handlePauseTimer : handleStartTimer}
         >
           <p className={styles.startBtnText}>
