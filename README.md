@@ -1,5 +1,5 @@
-Pocket Notes App (responsive)
-https://github.com/prajesh9921/Cuvette-Projects
+#Pocket Notes App (responsive)
+#https://pocket-notes-react-app.netlify.app/
 
 In the project directory, you can run:
 
