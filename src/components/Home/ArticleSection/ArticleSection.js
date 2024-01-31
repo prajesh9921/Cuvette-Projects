@@ -14,7 +14,7 @@ export default function ArticleSection() {
 
   const fetchNews = async () => {
     const res = await NewsApi({ setLoading });
-    setData(res[1]);
+    setData(res[5]);
   };
 
   if (loading) {

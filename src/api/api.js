@@ -22,3 +22,16 @@ export const NewsApi = async ({setLoading}) => {
         setLoading(false);
     }
 } 
+
+export const MoviesApi = async ({setLoading}) => {
+    try {
+        setLoading(true)
+        const url = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_MOVIES_API_KEY}&s=avengers`
+        const res = await axios.get(url);
+        setLoading(false);
+        return res?.data?.Search;
+    } catch (error) {
+        console.log("Error in NewsAPI", error);
+        setLoading(false);
+    }
+} 
