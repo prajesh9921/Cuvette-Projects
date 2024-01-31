@@ -3,6 +3,7 @@ import styles from "./ArticalSection.module.css";
 import { NewsApi } from "../../../api/api";
 import ReactLoading from "react-loading";
 import moment from "moment";
+import AppleCar from "../../../assets/Images/appleCar.jpg";
 
 export default function ArticleSection() {
   const [data, setData] = useState([]);
@@ -29,7 +30,7 @@ export default function ArticleSection() {
     <div className={styles.container}>
       <div
         style={{
-          backgroundImage: `url(${data?.urlToImage})`,
+          backgroundImage: `url(${data?.urlToImage || AppleCar})`,
           backgroundSize: "cover",
           height: "60%",
           width: "100%",

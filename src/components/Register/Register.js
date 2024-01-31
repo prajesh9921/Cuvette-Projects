@@ -30,7 +30,6 @@ export default function Register() {
   // Handle change
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
-    console.log(formData);
   };
 
   // Submit form function
@@ -55,7 +54,6 @@ export default function Register() {
     }
     
     if (isValid && formData.check) {
-      console.log("form validation successful");
       localStorage.setItem("userData", JSON.stringify(formData));
       navigate("/genre");
       setFormData({
