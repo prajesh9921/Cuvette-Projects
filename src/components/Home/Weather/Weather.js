@@ -36,10 +36,10 @@ export default function WeatherCard() {
           <p className={styles.temperatureBoxTitle}>{data?.current?.temp_c}°C</p>
           <p className={styles.alignP}>
             <Thermometer />{" "}
-            <p className={styles.subText}>
+            <span className={styles.subText}>
               {data?.current?.pressure_mb} mbar <br />
               Pressure
-            </p>
+            </span>
           </p>
         </div>
 
@@ -48,18 +48,18 @@ export default function WeatherCard() {
         <div className={styles.windBox}>
           <p className={styles.alignP}>
             <Wind />{" "}
-            <p className={styles.subText}>
+            <span className={styles.subText}>
               {data?.current?.wind_kph} km/h <br />
               Wind
-            </p>
+            </span>
           </p>
 
           <p className={styles.alignP}>
             <WaterDrop />{" "}
-            <p className={styles.subText}>
+            <span className={styles.subText}>
               {data?.current?.humidity}% <br />
               Humidiy
-            </p>
+            </span>
           </p>
         </div>
       </div>

@@ -39,11 +39,13 @@ export default function MoviesPage() {
         <div className={styles.loadingContainer}>
           <ReactLoading type="spinningBubbles" color="#fff" />
         </div>
+      ) : !moviesData ? (
+        <div className={styles.loadingContainer}><p className={styles.errorText}>Movies not found!</p></div>
       ) : (
         <div className={styles.movieCardLayout}>
           {moviesData.map((item) => {
             return (
-              <div className={styles.movieCard}>
+              <div key={item?.imdbID} className={styles.movieCard}>
                 <img
                   className={styles.moviePoster}
                   src={item?.Poster}

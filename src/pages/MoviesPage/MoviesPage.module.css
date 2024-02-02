@@ -59,3 +59,9 @@
   height: 80vh;
   align-items: center;
 }
+
+.errorText {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0;
+} 

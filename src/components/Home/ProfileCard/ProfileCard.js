@@ -19,7 +19,7 @@ export default function ProfileCard() {
         <p className={styles.headText}>{userData?.username || ""}</p>
         
         <div className={styles.genreContainer}>
-          {genreData.map(item => <GenreSelector title={item}/>) }
+          {genreData.map((item) => <GenreSelector key={item} title={item}/>) }
         </div>
       </div>
     </div>

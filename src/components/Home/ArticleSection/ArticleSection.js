@@ -10,12 +10,15 @@ export default function ArticleSection() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetchNews();
+    if (!data || data.length === 0) {
+      fetchNews();
+    }
   }, []);
 
   const fetchNews = async () => {
     const res = await NewsApi({ setLoading });
-    setData(res[5]);
+    const randomNumer = Math.floor(Math.random() * (res.length || 0));
+    setData(res[randomNumer]);
   };
 
   if (loading) {
@@ -30,18 +33,20 @@ export default function ArticleSection() {
     <div className={styles.container}>
       <div
         style={{
-          backgroundImage: `url(${data?.urlToImage || AppleCar})`,
+          backgroundImage: `url(${data?.image_url || AppleCar})`,
           backgroundSize: "cover",
           height: "60%",
           width: "100%",
           flex: 2,
           display: "flex",
           alignItems: "end",
+          borderTopLeftRadius: 20,
+          borderTopRightRadius: 20, 
         }}
       >
         <div className={styles.nameDiv}>
           <p className={styles.name}>{data?.title}</p>
-          <p>{moment(data?.publishedAt).format("MMMM Do YYYY")} | {moment(data?.publishedAt).format("h:mm a")}</p>
+          <p>{moment(data?.pubDate).format("MMMM Do YYYY")} | {moment(data?.pubDate).format("h:mm a")}</p>
         </div>
       </div>
 

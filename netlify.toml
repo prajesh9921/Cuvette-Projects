@@ -1,0 +1,22 @@
+[[redirects]]
+  from = "/api/weather/*"
+  to = "https://api.weatherapi.com/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/news/*"
+  to = "https://newsdata.io/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/movies/*"
+  to = "https://www.omdbapi.com/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
